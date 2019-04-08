@@ -9,7 +9,6 @@ RUN \
     curl -fsL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/sbt-$SBT_VERSION.tgz | tar xfz - -C /usr/local && \
     ln -s /usr/local/sbt/bin/* /usr/local/bin/ && \
     sbt sbtVersion&& \
-    apk del curl && \
-    rm sbt-$SBT_VERSION.tgz
+    apk del curl
 
 RUN apk add docker
