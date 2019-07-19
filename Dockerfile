@@ -10,3 +10,7 @@ RUN \
 
 # Install docker
 RUN apk add --no-cache docker
+
+# Install awscli
+RUN apk add --no-cache curl jq python py-pip && \
+    pip install awscli
